@@ -133,7 +133,7 @@ namespace _04_array
             PrintArray(words, "Print sort words array :: ");
             Array.Sort(words, (s1, s2) => s1.Length.CompareTo(s2.Length));
             PrintArray(words, "Print sort by length array :: ");
-
+            
         }
 
         static bool IsPositive(int number)
