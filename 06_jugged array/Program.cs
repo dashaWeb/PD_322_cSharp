@@ -1,11 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace _06_jugged_array
 {
+   /* Створити статичні методи для роботи з рваним 2-вимірним масивом(масив масивів).
+	- заповнення масиву випадковими числами+
+	- вивід на екран+
+	- циклічний зсув рядків матриці вверх на певну кількість рядків
+	- циклічний зсув рядків матриці вниз на певну кількість рядків
+	- додавання до матриці нового рядка(як останнього)  void AddRow(ref int[][] matrix, int[] newRow)+
+	- вилучення рядка з матриці за індексом+
+   */
     internal class Program
     {
         static int[][] createJugged(int row, int col)
@@ -56,10 +66,29 @@ namespace _06_jugged_array
                 arr[row2] = tmp;
             }
         }
-        static void PushRow(ref int[][] arr,int size)
+        static void PushRow(ref int[][] arr,int[] mas)
         {
             Array.Resize(ref arr, arr.Length + 1);
-            arr[arr.Length - 1] = new int[size];
+            arr[arr.Length - 1] = mas;
+        }
+        static void Remove(ref int[][] arr, int index)
+        {
+            if(index >= 0 && index < arr.Length)
+            {
+                int[][] tmp = new int[arr.Length - 1][];
+                for (int i = 0; i < tmp.Length; i++)
+                {
+                    if(i <index)
+                    {
+                        tmp[i] = arr[i];
+                    }
+                    else
+                    {
+                        tmp[i] = arr[i+1];
+                    }
+                }
+                arr = tmp;
+            }
         }
         static void SumInRow(int[][] arr)
         {
@@ -94,6 +123,30 @@ namespace _06_jugged_array
                 Console.WriteLine($"Average in line {i} = {arr[i].Average()}");
             }
         }
+        static void Up(int[][] arr, int count)
+        {
+            for(int j = 0; j<count; j++)
+            {
+                var tmp = arr[0];
+                for (int i = 0; i < arr.Length - 1; i++)
+                {
+                    arr[i] = arr[i + 1];
+                }
+                arr[arr.Length - 1] = tmp;
+            }
+        }
+        static void Down(int[][] arr, int count)
+        {
+            for (int j = 0; j < count; j++)
+            {
+                var tmp = arr[arr.Length-1];
+                for (int i = (arr.Length) - (1); i > 0; i--)
+                {
+                    arr[i] = arr[i - 1];
+                }
+                arr[0] = tmp;
+            }
+        }
         static void Main(string[] args)
         {
             int[][] arr = createJugged(7, 4);
@@ -105,12 +158,18 @@ namespace _06_jugged_array
             PrintJugged(arr);
             Console.WriteLine();
 
-            PushRow(ref arr, 3);
+            PushRow(ref arr, new int[3]);
             PrintJugged(arr);
             Console.WriteLine();
 
-            Console.WriteLine("Result sum :: ");
-            SumInRow(arr);
+            /*Console.WriteLine("Result sum :: ");
+            SumInRow(arr);*/
+            Up(arr, 3);
+            PrintJugged(arr);
+            Console.WriteLine();
+            Down(arr, 5);
+            PrintJugged(arr);
+            Console.WriteLine();
         }
     }
 }
