@@ -29,6 +29,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "12_Overload_op", "12_Overlo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "13_Matrix_indexers", "13_Matrix_indexers\13_Matrix_indexers.csproj", "{9C3DC216-F840-4605-8672-FACBC9883B0D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "14_Exception", "14_Exception\14_Exception.csproj", "{7D12E654-B8E7-404A-B6FB-B28B0803E4A9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "15_Namespaces", "15_Namespaces\15_Namespaces.csproj", "{B71D8FDF-2F0C-4846-BB35-5E8997D148CF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +91,14 @@ Global
 		{9C3DC216-F840-4605-8672-FACBC9883B0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9C3DC216-F840-4605-8672-FACBC9883B0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9C3DC216-F840-4605-8672-FACBC9883B0D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D12E654-B8E7-404A-B6FB-B28B0803E4A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D12E654-B8E7-404A-B6FB-B28B0803E4A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D12E654-B8E7-404A-B6FB-B28B0803E4A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D12E654-B8E7-404A-B6FB-B28B0803E4A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B71D8FDF-2F0C-4846-BB35-5E8997D148CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B71D8FDF-2F0C-4846-BB35-5E8997D148CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B71D8FDF-2F0C-4846-BB35-5E8997D148CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B71D8FDF-2F0C-4846-BB35-5E8997D148CF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
