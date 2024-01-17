@@ -29,13 +29,13 @@ namespace _26_Collection_Array
             List<int> list_2 = new List<int>(10);
             Console.WriteLine($"Count :: {list_2.Count}, \t Capacity :: {list_2.Capacity}");
 
-            List<int> list_3 = new List<int>(new int[] { 1,2,3});
+            List<int> list_3 = new List<int>(new int[] { 1, 2, 3 });
             Console.WriteLine($"Count :: {list_3.Count}, \t Capacity :: {list_3.Capacity}");
 
 
             list.Add(12);
             list.Add(13);
-            list.AddRange(new int[] { 1,2,3,4});
+            list.AddRange(new int[] { 1, 2, 3, 4 });
             PrintList(list, "List");
 
             list.Remove(12);
@@ -63,12 +63,12 @@ namespace _26_Collection_Array
             Console.WriteLine($"Count :: {list.Count}, \t Capacity :: {list.Capacity}");
 
             //list.Reverse();
-            list.Reverse(0,5);
+            list.Reverse(0, 5);
             PrintList(list, "List Fill");
 
-            *//*Console.WriteLine($"IndexOf {list.IndexOf(5)}");
-            Console.WriteLine($"IndexOf {list.IndexOf(5,4)}");
-            Console.WriteLine($"IndexOf {list.IndexOf(5,4,6)}");*//*
+            Console.WriteLine($"IndexOf {list.IndexOf(5)}");
+            Console.WriteLine($"IndexOf {list.IndexOf(5, 4)}");
+            Console.WriteLine($"IndexOf {list.IndexOf(5, 4, 6)}");
 
             list.Insert(5, 333);
             PrintList(list, "List Fill");
@@ -76,9 +76,20 @@ namespace _26_Collection_Array
             PrintList(list, "List Fill");
             list.Sort();
             PrintList(list, "List Fill");
-            Console.WriteLine(String.Join<int>(", ",list));*/
+            Console.WriteLine(String.Join<int>(", ", list));*/
 
-            ArrayList listt= new ArrayList() {1,5,true,"121" };
+
+            List<string> colors= new List<string>()
+            {"red","green","blue","yellow"};
+
+            PrintList(colors);
+
+            colors.Sort((col1, col2) => col1.Length.CompareTo(col2.Length));
+            PrintList(colors);
+
+            var res = colors.Find(color => color == "brown");
+            Console.WriteLine(res);
+            /*ArrayList listt= new ArrayList() {1,5,true,"121" };
 
             PrintList(listt);
             listt.Add(1.5);
@@ -89,7 +100,8 @@ namespace _26_Collection_Array
                 {
                     Console.WriteLine(item);
                 }
-            }
+            }*/
+
         }
 
         static void PrintList<T>(IEnumerable<T> list, string prompt = "")
