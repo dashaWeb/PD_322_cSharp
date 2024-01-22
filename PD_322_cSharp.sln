@@ -73,6 +73,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "32_delegate param", "32_del
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "33_Std Delegate", "33_Std Delegate\33_Std Delegate.csproj", "{BF1D2411-822E-4492-B63C-4AA2D38B5DAE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "34_Event", "34\34_Event.csproj", "{BBC464F7-43B9-4FD1-8531-E30BACB50FA8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "35_EventHandler", "35_EventHandler\35_EventHandler.csproj", "{C8B0D003-98CD-4540-922E-59673C19EE56}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -219,6 +223,14 @@ Global
 		{BF1D2411-822E-4492-B63C-4AA2D38B5DAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BF1D2411-822E-4492-B63C-4AA2D38B5DAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BF1D2411-822E-4492-B63C-4AA2D38B5DAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBC464F7-43B9-4FD1-8531-E30BACB50FA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBC464F7-43B9-4FD1-8531-E30BACB50FA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBC464F7-43B9-4FD1-8531-E30BACB50FA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBC464F7-43B9-4FD1-8531-E30BACB50FA8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8B0D003-98CD-4540-922E-59673C19EE56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8B0D003-98CD-4540-922E-59673C19EE56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8B0D003-98CD-4540-922E-59673C19EE56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8B0D003-98CD-4540-922E-59673C19EE56}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
